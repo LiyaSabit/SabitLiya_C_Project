@@ -32,6 +32,7 @@ int main(void)
         else
         {
             printf("no\n");
+            printf("You need to open brackets first\n");
             return 0; 
         }
         
@@ -39,12 +40,30 @@ int main(void)
 
     // printf("%i\n", check_1);
     // printf("%i\n", check_2);
-    if(check_1 == 0 && check_2 == 0) //checks if all of the brackets are closed
+    printf("Is it correct bracket sequence? ");
+    if (check_1 == 0 && check_2 == 0) //checks if all of the brackets are closed
     {
         printf("yes\n");
     }
     else 
     {
         printf("no\n");
+        if (check_1 > 0) 
+        {
+            printf("You need to close %i square bracket(s)\n", check_1);
+        }
+        if (check_1 < 0)
+        {
+            printf("You have excess %i square bracket(s)\n", (-1) * check_1);
+        }
+        if (check_2 > 0)
+        {
+            printf("You need to close %i round bracket(s)\n", check_2);
+        }
+        if (check_2 < 0)
+        {
+            printf("You have excess %i round bracket(s)\n", (-1) * check_2);
+        }
     }
+
 }
